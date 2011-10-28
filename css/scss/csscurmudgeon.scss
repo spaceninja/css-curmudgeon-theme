@@ -1,0 +1,938 @@
+/* SASS Variables --------------------------------------------------------- */
+$headline-fonts: HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+$copy-fonts: "Helvetica Neue", Arial, sans-serif;
+/* SASS Mixins ------------------------------------------------------------ */
+@mixin clearfix {
+	zoom: 1;
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+@mixin paper-shadows {
+	/* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+	position:relative;
+	z-index: 1;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+/*
+	&:before,
+	&:after {
+		content:"";
+		position:absolute; 
+		z-index:-2;
+		bottom:15px;
+		left:10px;
+		width:50%;
+		height:20%;
+		max-width:300px;
+		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+		-webkit-transform:rotate(-3deg);    
+		-moz-transform:rotate(-3deg);   
+		-ms-transform:rotate(-3deg);   
+		-o-transform:rotate(-3deg);
+		transform:rotate(-3deg);
+	}
+	&:after {
+		right:10px; 
+		left:auto;
+		-webkit-transform:rotate(3deg);   
+		-moz-transform:rotate(3deg);  
+		-ms-transform:rotate(3deg);  
+		-o-transform:rotate(3deg);
+		transform:rotate(3deg);
+	}
+*/
+}
+
+/* Colors and Fonts ------------------------------------------------------- */
+body {
+	background: #f6f6f6 url("../images/fabric3.jpg"); /* http://tileabl.es/ */
+	color: #333;
+	font: 100%/1.75 $copy-fonts;
+	font-weight: 200;
+}
+a, a:link, a:visited {
+	color: #09c;
+}
+a:hover, a:focus, a:active {
+	color: #069;
+}
+
+/* Main ------------------------------------------------------------------- */
+#page {
+	width: 760px;
+	margin: 0 auto;
+}
+#main {
+	@include clearfix;
+}
+
+/* Header ----------------------------------------------------------------- */
+#site-header {
+	padding: 30px 50px;
+	background: #f9f9f9;
+	@include paper-shadows;
+	#site-title {
+		font-size: 3em;
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+	#site-description {
+		margin: 0;
+	}
+	#skip-link {
+		position: absolute;
+		left: -10000px;
+	}
+}
+
+/* Navigation ------------------------------------------------------------- */
+#navigation {
+	position: relative;
+  line-height: 1;
+	ul {
+		margin: 0;
+		list-style: none;
+		li {
+			margin: 0;
+			display: inline;
+			float: left;
+			position: relative;
+			a {
+				display: block;
+			}
+			ul {
+				display: none;
+			}
+		} 
+	}
+	#searchform {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 20px;
+		background: #666;
+		color: #fff;
+		padding: 2px 10px;
+		-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.2);
+		box-shadow:0 1px 4px rgba(0, 0, 0, 0.2);
+		label {
+			display: none;
+		}
+	}
+} // #navigation
+#primary-nav {
+	ul {
+		@include clearfix;
+		position: relative;
+		z-index: 0;
+		li {
+			position: relative;
+			a {
+				-webkit-transition: all .25s ease;
+				-moz-transition: all .25s ease;
+				transition: all .25s ease;
+				margin: 0 0 0 20px;
+				display: block;
+				font-family: $headline-fonts;
+				font-weight: bold;
+				font-size: 1em;
+				text-transform: uppercase;
+				background: #666;
+				color: #fff;
+				padding: 10px 10px 5px;
+				text-decoration: none;
+				position: relative;
+				top: -5px;
+				-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.2);
+				-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.2);
+				box-shadow:0 1px 4px rgba(0, 0, 0, 0.2);
+				&:hover, &:focus {
+					top: -1px;
+				}
+			}
+			&.current-menu-item {
+				a {
+					top: -1px;
+				}
+			}
+		}
+	}
+} // #primary-nav
+
+/* Content ---------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headline-fonts;
+	font-weight: bold;
+	line-height: 1.25;
+	margin: 0 0 5px;
+}
+h1 {
+	font-size: 2.5em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.167em;
+}
+h5, h6 {
+	font-size: 1em;
+}
+#content {
+	.page-title {
+		font-size: 2em;
+		em {
+			font-style: normal;
+			font-weight: normal;
+		}
+	}
+	#page-header {
+		margin: 50px 0;
+		padding: 30px 50px;
+		background: #fff;
+		@include paper-shadows;
+	}
+	.author-bio {
+		header {
+			display: inline;
+			.avatar {
+				display: none;
+			}
+			h3 {
+				font-size: 1em;
+				display: inline;
+			}
+		}
+		.author-content {
+			display: inline;
+			p {
+				display: inline;
+			}
+		}
+	}
+}
+strong, b {
+	font-weight: bold;
+}
+em, i, cite {
+	font-style: italic;
+}
+small {
+	font-size: .75em; // 12px
+}
+blockquote {
+	background: #fff;
+	@include paper-shadows;
+	padding: 15px 30px;
+	margin: 1em 0;
+}
+blockquote p {
+	margin: .75em 0 0;
+}
+blockquote p:first-child {
+	margin: 0;
+}
+img {
+	max-width: 100%;
+}
+
+/* Tables ----------------------------------------------------------------- */
+table {
+	width: 100%;
+	th,
+	td {
+		padding: .5em 1.25em;
+		text-align: left;
+		vertical-align: top;
+		line-height: 1.25;
+		border: 1px solid #e6e6e6;
+		border-width: 1px 0 0 1px;
+	}
+	th {
+		font-weight: bold;
+	}
+	tr:first-child th,
+	tr:first-child td {
+		border-top: 0;
+	}
+	th:first-child,
+	td:first-child {
+		border-left: 0;
+	}
+	.even th,
+	.even td,
+	tr:nth-child(even) th,
+	tr:nth-child(even) td {
+		background: #f6f6f6;
+	}
+	.odd th,
+	.odd td,
+	tr:nth-child(odd) th,
+	tr:nth-child(odd) td {
+		background: none;
+	}
+}
+
+/* Forms ------------------------------------------------------------------ */
+form {
+	@include clearfix;
+	label {
+		float: left;
+		text-align: right;
+		font-weight: bold;
+		width: 115px;
+		margin: 2px 10px .5em 0;
+		&.error {
+			color: #c00;
+		}
+	}
+	textarea,
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"] {
+		-webkit-appearance: none;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding;
+		background-clip: padding-box;
+		background-color: #fff;
+		border: 1px solid;
+		border-color: #848484 #c1c1c1 #e1e1e1;
+		color: #000;
+		outline: 0;
+		padding: 2px 3px;
+		font-family: $copy-fonts;
+		font-size: 1em;
+		height: 1.8em;
+		/* IE7 */
+		*padding-top: 2px;
+		*padding-bottom: 1px;
+		*height: auto;
+	}
+	input {
+		width: 500px;
+		&[type=submit],
+		&[type=button],
+		&[type=radio],
+		&[type=checkbox] {
+			width: auto;
+		}
+	}
+	textarea {
+		width: 500px;
+		min-height: 150px;
+		overflow: auto;
+		resize: vertical;
+	}
+	/* placeholder text - these need to be separate rules for some reason */
+	input.hasPlaceholder, textarea.hasPlaceholder { color: #999; }
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #999; }
+	input:-moz-placeholder, textarea:-moz-placeholder { color: #999; }
+	.field {
+		clear: both;
+		margin: .5em 0;
+	}
+	.required {
+		color: #c00;
+	}
+	.radio,
+	.radios,
+	.check,
+	.checks {
+		padding-left: 125px;
+		label {
+			float: none;
+			text-align: left;
+			width: auto;
+			margin-left: 5px;
+			margin-right: 0;
+		}
+	}
+	.radio,
+	.check {
+		margin: 1em 0;
+		padding-left: 15px;
+	}
+	.actions {
+		margin-top: 1em;
+		text-align: center;
+	}
+	a.button,
+	a.sq_button,
+	input[type="reset"],
+	input[type="submit"],
+	input[type="button"],
+	button {
+		font-family: $copy-fonts;
+		font-size: 1em;
+	}
+} // form
+
+/* Wordpress Styles ------------------------------------------------------- */
+/* image alignment */
+.alignnone,
+.aligncenter,
+.alignright,
+.alignleft,
+.default {
+	margin: .5em 1.5em 1em;;
+}
+.alignnone {
+	margin-left: 0;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignright {
+	float: right;
+	margin-right: 0;
+}
+.alignleft {
+	float: left;
+	margin-left: 0;
+}
+
+/* captions and galleries */
+.wp-caption {
+	background: #fff;
+	@include paper-shadows;
+	padding: 4px;
+	text-align: center;
+	max-width: 100%;
+}
+.wp-caption img {
+	display: block;
+	margin: 5px 5px 0;
+	outline: 1px solid #eee;
+}
+.wp-caption p.wp-caption-text {
+	color: #666;
+	font-size: .75em; // 12px
+	margin: 5px;
+}
+
+.gallery-item {
+	float: left;
+	width: 33%; /* default is 3 columns */
+}
+.gallery-columns-1 .gallery-item { width: 100%; }
+.gallery-columns-2 .gallery-item { width: 50%; }
+.gallery-columns-4 .gallery-item { width: 25%; }
+.gallery-columns-5 .gallery-item { width: 20%; }
+.gallery-item, .wp-caption {
+	text-align: center;
+}
+.gallery-icon a, .wp-caption a {
+	display: block;
+}
+.gallery-icon img, .wp-caption img {
+	border: 0;
+}
+.gallery-caption, .wp-caption-text {
+	margin: 0;
+	padding-top: .5em;
+}
+
+/* these are required but don't have to be defined */
+.sticky {}
+.bypostauthor {}
+
+img.wp-smiley {
+	/* http://themeshaper.com/2011/09/09/let-your-wordpress-smilies-smile/ */
+	background: none;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* Blog Posts ------------------------------------------------------------- */
+article.post,
+article.page,
+article.attachment {
+	@include clearfix;
+	margin: 50px 0 75px;
+	padding: 50px;
+	background: #fff;
+	@include paper-shadows;
+	a {
+		font-weight: bold;
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+	header {
+		position: relative;
+		margin: 0 0 20px;
+		h1 {
+			margin: 0 0 5px;
+			font-weight: bold;
+			a {
+				color: #000;
+				text-decoration: none;
+				&:hover, &:focus {
+					color: #09c;
+					text-decoration: underline;
+				}
+			}
+		}
+		.byline {
+			font-size: .75em; // 12px
+			color: #666;
+			time {
+				display: inline;
+			}
+		}
+	} // header
+	.author-bio {
+		margin: 30px 0;
+		font-size: .75em; // 12px
+		clear: both;
+		color: #666;
+	}
+	footer {
+		margin: 30px 0 0;
+		@include clearfix;
+		.comments {
+			font-family: $headline-fonts;
+			font-weight: bold;
+			margin: 0;
+			display: block;
+			float: left;
+		} // .comments
+		.folksonomy {
+			max-width: 500px;
+			float: right;
+			font-size: .875em; // 14px
+			a {
+				color: #333;
+				font-weight: normal;
+				text-decoration: none;
+				&:hover, &:focus {
+					color: #09c;
+					text-decoration: underline;
+				}
+			}
+		} // .folksonomy
+	} // footer
+} // article
+
+/* Sticky Posts (only on homepage) ---------------------------------------- */
+.home #content article.sticky {
+}
+
+/* Single Paginated Post Navigation --------------------------------------- */
+.post-nav {
+	line-height: 1;
+	@include clearfix;
+	text-align: center;
+	clear: both;
+	p {
+		margin: 1em 0 0;
+		font-family: $headline-fonts;
+		text-transform: uppercase;
+		line-height: 25px;
+		a, span, strong {
+			display: inline-block;
+			font-weight: normal;
+			text-decoration: none;
+			color: #333;
+
+			height: 25px;
+			min-width: 25px;
+			text-align: center;
+
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			border-radius: 20px;
+		}
+		strong {
+			font-weight: bold;
+			margin-right: .5em;
+		}
+		a:hover, a:focus, span {
+			background: #000;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+/* Paged Archive Navigation ----------------------------------------------- */
+.paged-post-navigation {
+	line-height: 1;
+	@include clearfix;
+	text-align: center;
+	clear: both;
+	background: #fff;
+	@include paper-shadows;
+	padding: 20px;
+	margin: 50px 0;
+	ul {
+		margin: 0;
+		list-style: none;
+		li {
+			margin: 0 2px;
+			display: inline;
+			line-height: 40px;
+			&.first a,
+			&.previous a,
+			&.next a,
+			&.last a {
+				font-weight: bold;
+			}
+			&.next a:before {
+				content: '❮ ';
+			}
+			&.previous a:after {
+				content: ' ❯';
+			}
+		}
+	}
+	a {
+		display: inline-block;
+		font-family: $headline-fonts;
+		font-size: 1.5em; // 24px
+		text-decoration: none;
+		color: #000;
+
+		height: 40px;
+		min-width: 20px;
+		text-align: center;
+		padding: 0 10px;
+
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		border-radius: 20px;
+		&:hover, &:focus, &.current {
+			background: #000;
+			color: #fff;
+		}
+	}
+}
+
+/* Single Post Navigation ------------------------------------------------- */
+.single-post-navigation {
+	@include clearfix;
+	background: #fff;
+	@include paper-shadows;
+	padding: 20px;
+	margin: 50px 0;
+	clear: both;
+	ul {
+		margin: 0;
+		list-style: none;
+		li {
+			margin: 0;
+			display: inline;
+			width: 285px;
+			strong {
+				display: block;
+				font-family: $headline-fonts;
+				font-size: 1.5em; // 24px
+				line-height: 1;
+			}
+			a {
+				display: block;
+				font-weight: bold;
+				text-decoration: none;
+				&:hover, &:focus {
+					text-decoration: underline;
+				}
+			}
+			&.next {
+				float: left;
+				strong {
+					display: block;
+					&:before {
+						content: '❮ ';
+					}
+				}
+				a {
+					margin-left: 17px;
+				}
+			}
+			&.previous {
+				float: right;
+				text-align: right;
+				strong {
+					display: block;
+					&::after {
+						content: ' ❯';
+					}
+				}
+				a {
+					margin-right: 18px;
+				}
+			}
+		}
+	}
+}
+
+/* Comment Navigation ----------------------------------------------------- */
+.comment-navigation {
+	@include clearfix;
+	margin: 30px 0 0;
+	clear: both;
+	ul {
+		margin: 0;
+		list-style: none;
+		li {
+			margin: 0;
+			font-family: $headline-fonts;
+			font-size: 1.5em; // 24px
+			line-height: 1;
+			width: 285px;
+			a {
+				color: #000;
+				text-decoration: none;
+				&:hover, &:focus {
+					color: #00c4ee;
+				}
+			}
+			&.next {
+				float: left;
+				a {
+					display: block;
+					&:before {
+						content: '❮ ';
+					}
+				}
+			}
+			&.previous {
+				float: right;
+				text-align: right;
+				a {
+					display: block;
+					&::after {
+						content: ' ❯';
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Comments --------------------------------------------------------------- */
+#comments {
+	@include clearfix;
+	background: #fff;
+	@include paper-shadows;
+	padding: 50px;
+	margin: 50px 0;
+	a {
+		font-weight: bold;
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+	ol {
+		list-style: none;
+		li {
+			margin: 0;
+			article {
+				margin: 20px 0;
+				position: relative;
+				min-height: 64px;
+				padding-left: 75px;
+				.avatar {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				h3 {
+					font-size: 1.125em; // 18px
+					a {
+						color: #000;
+						text-decoration: none;
+						&:hover, &:focus {
+							color: #09c;
+							text-decoration: underline;
+						}
+					}
+				}
+				p {
+					margin: .5em 0;
+				}
+				footer {
+					font-size: .75em; // 12px
+					color: #666;
+					time {
+						display: inline;
+					}
+				}
+			}
+			li {
+				margin-left: 50px;
+				article {
+					min-height: 48px;
+					padding-left: 60px;
+				}
+			}
+		}
+	}
+}
+
+/* Comment Form ----------------------------------------------------------- */
+#respond {
+	background: #fff;
+	@include paper-shadows;
+	padding: 50px;
+	margin: 50px 0;
+	position: relative;
+	.field {
+		label {
+		}
+		input,
+		textarea {
+			
+		}
+	}
+	.comment-notes,
+	.form-allowed-tags {
+		color: #666;
+		margin: .5em 0 0;
+	}
+}
+
+/* 404 Page --------------------------------------------------------------- */
+#page-404 {
+	@include clearfix;
+	#widgets {
+		section {
+			background: #fff;
+			@include paper-shadows;
+			padding: 15px;
+			margin: 0 15px 15px 0;
+			float: left;
+			width: 280px;
+			&:nth-child(odd) {
+				clear: left;
+			}
+		}
+	}
+}
+
+/* Archives Page ---------------------------------------------------------- */
+#page-archives {
+	.post-content {
+		section {
+			background: #fff;
+			@include paper-shadows;
+			padding: 15px;
+			margin: 0 15px 15px 0;
+			float: left;
+			width: 280px;
+			&:nth-child(odd) {
+				clear: left;
+			}
+		}
+	}
+}
+
+/* Sidebar ---------------------------------------------------------------- */
+#sidebar {
+	background: #f9f9f9;
+	@include paper-shadows;
+	padding: 50px;
+	margin: 50px 0;
+	@include clearfix;
+	.widget {
+		float: left;
+		width: 300px;
+		margin-left: 50px;
+		&:first-child {
+			margin-left: 0;
+		}
+		h3 {
+			font-family: "TradeGothicCn", Arial, sans-serif;
+			font-weight: bold;
+			color: #000;
+			font-size: 21px;
+			text-transform: uppercase;
+			line-height: 1.25;
+			margin: 0;
+		}
+		ul, p, form {
+			margin: .5em 0 0;
+		}
+		a {
+			color: #000;
+			text-decoration: none;
+			&:hover, &:focus {
+				color: #069;
+				text-decoration: underline;
+			}
+		}
+		.more {
+			margin: 0;
+			a {
+				display: block;
+				padding-top: .5em;
+				border-top: 1px solid #ddd;
+				text-align: right;
+				font-weight: bold;
+				color: #00c1f1; // light blue
+				&:hover, &:focus {
+					cursor: pointer; // not sure why I have to redeclare this - SV
+				}
+			}
+		}
+	} // .widget
+	.widget_text {
+		background: #ffc;
+		@include paper-shadows;
+		padding: 30px;
+		width: 240px;
+		-webkit-transform:rotate(-2deg);   
+		-moz-transform:rotate(-2deg);  
+		-ms-transform:rotate(-2deg);  
+		-o-transform:rotate(-2deg);
+		transform:rotate(-2deg);
+	}
+}
+.mac #sidebar #widget-search #searchsubmit {
+	padding: 7px 0 0 0;
+}
+
+/* Footer ----------------------------------------------------------------- */
+#site-footer {
+	position: relative;
+	padding: 20px 50px;
+	background: #f9f9f9;
+	margin: 0;
+	@include paper-shadows;
+	.copyright {
+		color: #666;
+		font-size: .875em; // 14px
+	}
+} // #site-footer

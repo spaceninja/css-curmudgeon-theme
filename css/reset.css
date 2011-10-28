@@ -1,0 +1,164 @@
+/*
+  Generic Reset Stylesheet
+  Based on Eric Meyer's Reset, v2.0 20110126
+  http://meyerweb.com/eric/tools/css/reset/
+  Modified by Scptt Vamdejeu
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* Additions by SV */
+.floatleft,
+.float_left {
+  float: left;
+  margin: 0 1em .5em 0;
+}
+.floatright,
+.float_right {
+  float: right;
+  margin: 0 0 .5em 1em;
+}
+.leftalign,
+.left_align {
+  text-align: left;
+}
+.rightalign,
+.right_align {
+  text-align: right;
+}
+
+code, kbd, samp, tt, pre {
+  font-family: Inconsolata, Consolas, Monaco, "Andale Mono", monospace;
+  line-height: 1;
+}
+acronym, abbr {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* list styles */
+ul {
+  list-style-type: disc;
+}
+ul ul {
+  list-style-type: circle;
+}
+ul ul ul {
+  list-style-type: square;
+}
+ul ul ul ul {
+  list-style-type: circle;
+}
+ol {
+  list-style-type: decimal;
+}
+ol ol {
+  list-style-type: lower-alpha;
+}
+ol ol ol {
+  list-style-type: decimal;
+}
+dt {
+  font-weight: bold;
+}
+
+/* margins */
+ul li {
+  margin-left: 1.5em;
+}
+ol li {
+  margin-left: 2.25em;
+}
+dd {
+  margin-left: 1.5em;
+}
+blockquote {
+  margin-left: 1.5em;
+}
+h1, h2, h3, h4, h5, h6, p, table, ul, ol, dl, pre {
+  /* intelligent spacing to let headlines sit on top of following elements */
+  margin: .25em 0 1em;
+}
+ul ul, ol ol {
+  /* then turn off that spacing on nested lists */
+  margin: 0;
+}
+sup, sub {
+  /* use rel position to adjust super and subscripts */
+  position: relative;
+  bottom: .33em;
+  font-size: .8em;
+}
+sub {
+  bottom: -.33em;
+}
+
+/* dividers */
+hr {
+  /* hide hrs outside the content area, so we can use as dividers for non-css */
+  display: none;
+}
+#content hr {
+  /* now turn hrs back on in the content area */
+  display: block;
+  border: 1px solid #ccc;
+  border-width: 1px 0 0;
+  margin: 1em 0;
+}
+
+/*
+  clearfix
+  ref: http://www.positioniseverything.net/easyclearing.html
+*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+	zoom: 1;
+}

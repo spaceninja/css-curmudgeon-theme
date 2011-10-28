@@ -1,0 +1,1322 @@
+/* SASS Variables --------------------------------------------------------- */
+/* SASS Mixins ------------------------------------------------------------ */
+/* Colors and Fonts ------------------------------------------------------- */
+body {
+  background: #f6f6f6 url("../images/fabric3.jpg");
+  /* http://tileabl.es/ */
+  color: #333;
+  font: 100%/1.75 "Helvetica Neue", Arial, sans-serif;
+  font-weight: 200; }
+
+a, a:link, a:visited {
+  color: #09c; }
+
+a:hover, a:focus, a:active {
+  color: #069; }
+
+/* Main ------------------------------------------------------------------- */
+#page {
+  width: 760px;
+  margin: 0 auto; }
+
+#main {
+  zoom: 1; }
+  #main:before, #main:after {
+    content: '';
+    display: table; }
+  #main:after {
+    clear: both; }
+
+/* Header ----------------------------------------------------------------- */
+#site-header {
+  padding: 30px 50px;
+  background: #f9f9f9;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */ }
+  #site-header #site-title {
+    font-size: 3em; }
+    #site-header #site-title a {
+      color: #000;
+      text-decoration: none; }
+  #site-header #site-description {
+    margin: 0; }
+  #site-header #skip-link {
+    position: absolute;
+    left: -10000px; }
+
+/* Navigation ------------------------------------------------------------- */
+#navigation {
+  position: relative;
+  line-height: 1; }
+  #navigation ul {
+    margin: 0;
+    list-style: none; }
+    #navigation ul li {
+      margin: 0;
+      display: inline;
+      float: left;
+      position: relative; }
+      #navigation ul li a {
+        display: block; }
+      #navigation ul li ul {
+        display: none; }
+  #navigation #searchform {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: #666;
+    color: #fff;
+    padding: 2px 10px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+    #navigation #searchform label {
+      display: none; }
+
+#primary-nav ul {
+  zoom: 1;
+  position: relative;
+  z-index: 0; }
+  #primary-nav ul:before, #primary-nav ul:after {
+    content: '';
+    display: table; }
+  #primary-nav ul:after {
+    clear: both; }
+  #primary-nav ul li {
+    position: relative; }
+    #primary-nav ul li a {
+      -webkit-transition: all .25s ease;
+      -moz-transition: all .25s ease;
+      transition: all .25s ease;
+      margin: 0 0 0 20px;
+      display: block;
+      font-family: HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+      font-weight: bold;
+      font-size: 1em;
+      text-transform: uppercase;
+      background: #666;
+      color: #fff;
+      padding: 10px 10px 5px;
+      text-decoration: none;
+      position: relative;
+      top: -5px;
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+      #primary-nav ul li a:hover, #primary-nav ul li a:focus {
+        top: -1px; }
+    #primary-nav ul li.current-menu-item a {
+      top: -1px; }
+
+/* Content ---------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 0 0 5px; }
+
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.167em; }
+
+h5, h6 {
+  font-size: 1em; }
+
+#content .page-title {
+  font-size: 2em; }
+  #content .page-title em {
+    font-style: normal;
+    font-weight: normal; }
+#content #page-header {
+  margin: 50px 0;
+  padding: 30px 50px;
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */ }
+#content .author-bio header {
+  display: inline; }
+  #content .author-bio header .avatar {
+    display: none; }
+  #content .author-bio header h3 {
+    font-size: 1em;
+    display: inline; }
+#content .author-bio .author-content {
+  display: inline; }
+  #content .author-bio .author-content p {
+    display: inline; }
+
+strong, b {
+  font-weight: bold; }
+
+em, i, cite {
+  font-style: italic; }
+
+small {
+  font-size: .75em; }
+
+blockquote {
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */
+  padding: 15px 30px;
+  margin: 1em 0; }
+
+blockquote p {
+  margin: .75em 0 0; }
+
+blockquote p:first-child {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+/* Tables ----------------------------------------------------------------- */
+table {
+  width: 100%; }
+  table th,
+  table td {
+    padding: .5em 1.25em;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.25;
+    border: 1px solid #e6e6e6;
+    border-width: 1px 0 0 1px; }
+  table th {
+    font-weight: bold; }
+  table tr:first-child th,
+  table tr:first-child td {
+    border-top: 0; }
+  table th:first-child,
+  table td:first-child {
+    border-left: 0; }
+  table .even th,
+  table .even td,
+  table tr:nth-child(even) th,
+  table tr:nth-child(even) td {
+    background: #f6f6f6; }
+  table .odd th,
+  table .odd td,
+  table tr:nth-child(odd) th,
+  table tr:nth-child(odd) td {
+    background: none; }
+
+/* Forms ------------------------------------------------------------------ */
+form {
+  zoom: 1;
+  /* placeholder text - these need to be separate rules for some reason */ }
+  form:before, form:after {
+    content: '';
+    display: table; }
+  form:after {
+    clear: both; }
+  form label {
+    float: left;
+    text-align: right;
+    font-weight: bold;
+    width: 115px;
+    margin: 2px 10px .5em 0; }
+    form label.error {
+      color: #c00; }
+  form textarea,
+  form input[type="date"],
+  form input[type="datetime"],
+  form input[type="datetime-local"],
+  form input[type="email"],
+  form input[type="month"],
+  form input[type="number"],
+  form input[type="password"],
+  form input[type="search"],
+  form input[type="tel"],
+  form input[type="text"],
+  form input[type="time"],
+  form input[type="url"],
+  form input[type="week"] {
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid;
+    border-color: #848484 #c1c1c1 #e1e1e1;
+    color: #000;
+    outline: 0;
+    padding: 2px 3px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    height: 1.8em;
+    /* IE7 */
+    *padding-top: 2px;
+    *padding-bottom: 1px;
+    *height: auto; }
+  form input {
+    width: 500px; }
+    form input[type=submit], form input[type=button], form input[type=radio], form input[type=checkbox] {
+      width: auto; }
+  form textarea {
+    width: 500px;
+    min-height: 150px;
+    overflow: auto;
+    resize: vertical; }
+  form input.hasPlaceholder, form textarea.hasPlaceholder {
+    color: #999; }
+  form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+    color: #999; }
+  form input:-moz-placeholder, form textarea:-moz-placeholder {
+    color: #999; }
+  form .field {
+    clear: both;
+    margin: .5em 0; }
+  form .required {
+    color: #c00; }
+  form .radio,
+  form .radios,
+  form .check,
+  form .checks {
+    padding-left: 125px; }
+    form .radio label,
+    form .radios label,
+    form .check label,
+    form .checks label {
+      float: none;
+      text-align: left;
+      width: auto;
+      margin-left: 5px;
+      margin-right: 0; }
+  form .radio,
+  form .check {
+    margin: 1em 0;
+    padding-left: 15px; }
+  form .actions {
+    margin-top: 1em;
+    text-align: center; }
+  form a.button,
+  form a.sq_button,
+  form input[type="reset"],
+  form input[type="submit"],
+  form input[type="button"],
+  form button {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em; }
+
+/* Wordpress Styles ------------------------------------------------------- */
+/* image alignment */
+.alignnone,
+.aligncenter,
+.alignright,
+.alignleft,
+.default {
+  margin: .5em 1.5em 1em; }
+
+.alignnone {
+  margin-left: 0; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignright {
+  float: right;
+  margin-right: 0; }
+
+.alignleft {
+  float: left;
+  margin-left: 0; }
+
+/* captions and galleries */
+.wp-caption {
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */
+  padding: 4px;
+  text-align: center;
+  max-width: 100%; }
+
+.wp-caption img {
+  display: block;
+  margin: 5px 5px 0;
+  outline: 1px solid #eee; }
+
+.wp-caption p.wp-caption-text {
+  color: #666;
+  font-size: .75em;
+  margin: 5px; }
+
+.gallery-item {
+  float: left;
+  width: 33%;
+  /* default is 3 columns */ }
+
+.gallery-columns-1 .gallery-item {
+  width: 100%; }
+
+.gallery-columns-2 .gallery-item {
+  width: 50%; }
+
+.gallery-columns-4 .gallery-item {
+  width: 25%; }
+
+.gallery-columns-5 .gallery-item {
+  width: 20%; }
+
+.gallery-item, .wp-caption {
+  text-align: center; }
+
+.gallery-icon a, .wp-caption a {
+  display: block; }
+
+.gallery-icon img, .wp-caption img {
+  border: 0; }
+
+.gallery-caption, .wp-caption-text {
+  margin: 0;
+  padding-top: .5em; }
+
+/* these are required but don't have to be defined */
+img.wp-smiley {
+  /* http://themeshaper.com/2011/09/09/let-your-wordpress-smilies-smile/ */
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* Blog Posts ------------------------------------------------------------- */
+article.post,
+article.page,
+article.attachment {
+  zoom: 1;
+  margin: 50px 0 75px;
+  padding: 50px;
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */ }
+  article.post:before, article.post:after,
+  article.page:before,
+  article.page:after,
+  article.attachment:before,
+  article.attachment:after {
+    content: '';
+    display: table; }
+  article.post:after,
+  article.page:after,
+  article.attachment:after {
+    clear: both; }
+  article.post a,
+  article.page a,
+  article.attachment a {
+    font-weight: bold;
+    text-decoration: none; }
+    article.post a:hover, article.post a:focus,
+    article.page a:hover,
+    article.page a:focus,
+    article.attachment a:hover,
+    article.attachment a:focus {
+      text-decoration: underline; }
+  article.post header,
+  article.page header,
+  article.attachment header {
+    position: relative;
+    margin: 0 0 20px; }
+    article.post header h1,
+    article.page header h1,
+    article.attachment header h1 {
+      margin: 0 0 5px;
+      font-weight: bold; }
+      article.post header h1 a,
+      article.page header h1 a,
+      article.attachment header h1 a {
+        color: #000;
+        text-decoration: none; }
+        article.post header h1 a:hover, article.post header h1 a:focus,
+        article.page header h1 a:hover,
+        article.page header h1 a:focus,
+        article.attachment header h1 a:hover,
+        article.attachment header h1 a:focus {
+          color: #09c;
+          text-decoration: underline; }
+    article.post header .byline,
+    article.page header .byline,
+    article.attachment header .byline {
+      font-size: .75em;
+      color: #666; }
+      article.post header .byline time,
+      article.page header .byline time,
+      article.attachment header .byline time {
+        display: inline; }
+  article.post .author-bio,
+  article.page .author-bio,
+  article.attachment .author-bio {
+    margin: 30px 0;
+    font-size: .75em;
+    clear: both;
+    color: #666; }
+  article.post footer,
+  article.page footer,
+  article.attachment footer {
+    margin: 30px 0 0;
+    zoom: 1; }
+    article.post footer:before, article.post footer:after,
+    article.page footer:before,
+    article.page footer:after,
+    article.attachment footer:before,
+    article.attachment footer:after {
+      content: '';
+      display: table; }
+    article.post footer:after,
+    article.page footer:after,
+    article.attachment footer:after {
+      clear: both; }
+    article.post footer .comments,
+    article.page footer .comments,
+    article.attachment footer .comments {
+      font-family: HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+      font-weight: bold;
+      margin: 0;
+      display: block;
+      float: left; }
+    article.post footer .folksonomy,
+    article.page footer .folksonomy,
+    article.attachment footer .folksonomy {
+      max-width: 500px;
+      float: right;
+      font-size: .875em; }
+      article.post footer .folksonomy a,
+      article.page footer .folksonomy a,
+      article.attachment footer .folksonomy a {
+        color: #333;
+        font-weight: normal;
+        text-decoration: none; }
+        article.post footer .folksonomy a:hover, article.post footer .folksonomy a:focus,
+        article.page footer .folksonomy a:hover,
+        article.page footer .folksonomy a:focus,
+        article.attachment footer .folksonomy a:hover,
+        article.attachment footer .folksonomy a:focus {
+          color: #09c;
+          text-decoration: underline; }
+
+/* Sticky Posts (only on homepage) ---------------------------------------- */
+/* Single Paginated Post Navigation --------------------------------------- */
+.post-nav {
+  line-height: 1;
+  zoom: 1;
+  text-align: center;
+  clear: both; }
+  .post-nav:before, .post-nav:after {
+    content: '';
+    display: table; }
+  .post-nav:after {
+    clear: both; }
+  .post-nav p {
+    margin: 1em 0 0;
+    font-family: HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: 25px; }
+    .post-nav p a, .post-nav p span, .post-nav p strong {
+      display: inline-block;
+      font-weight: normal;
+      text-decoration: none;
+      color: #333;
+      height: 25px;
+      min-width: 25px;
+      text-align: center;
+      -moz-border-radius: 20px;
+      -webkit-border-radius: 20px;
+      border-radius: 20px; }
+    .post-nav p strong {
+      font-weight: bold;
+      margin-right: .5em; }
+    .post-nav p a:hover, .post-nav p a:focus, .post-nav p span {
+      background: #000;
+      color: #fff;
+      text-decoration: none; }
+
+/* Paged Archive Navigation ----------------------------------------------- */
+.paged-post-navigation {
+  line-height: 1;
+  zoom: 1;
+  text-align: center;
+  clear: both;
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */
+  padding: 20px;
+  margin: 50px 0; }
+  .paged-post-navigation:before, .paged-post-navigation:after {
+    content: '';
+    display: table; }
+  .paged-post-navigation:after {
+    clear: both; }
+  .paged-post-navigation ul {
+    margin: 0;
+    list-style: none; }
+    .paged-post-navigation ul li {
+      margin: 0 2px;
+      display: inline;
+      line-height: 40px; }
+      .paged-post-navigation ul li.first a, .paged-post-navigation ul li.previous a, .paged-post-navigation ul li.next a, .paged-post-navigation ul li.last a {
+        font-weight: bold; }
+      .paged-post-navigation ul li.next a:before {
+        content: '❮ '; }
+      .paged-post-navigation ul li.previous a:after {
+        content: ' ❯'; }
+  .paged-post-navigation a {
+    display: inline-block;
+    font-family: HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #000;
+    height: 40px;
+    min-width: 20px;
+    text-align: center;
+    padding: 0 10px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px; }
+    .paged-post-navigation a:hover, .paged-post-navigation a:focus, .paged-post-navigation a.current {
+      background: #000;
+      color: #fff; }
+
+/* Single Post Navigation ------------------------------------------------- */
+.single-post-navigation {
+  zoom: 1;
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */
+  padding: 20px;
+  margin: 50px 0;
+  clear: both; }
+  .single-post-navigation:before, .single-post-navigation:after {
+    content: '';
+    display: table; }
+  .single-post-navigation:after {
+    clear: both; }
+  .single-post-navigation ul {
+    margin: 0;
+    list-style: none; }
+    .single-post-navigation ul li {
+      margin: 0;
+      display: inline;
+      width: 285px; }
+      .single-post-navigation ul li strong {
+        display: block;
+        font-family: HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+        font-size: 1.5em;
+        line-height: 1; }
+      .single-post-navigation ul li a {
+        display: block;
+        font-weight: bold;
+        text-decoration: none; }
+        .single-post-navigation ul li a:hover, .single-post-navigation ul li a:focus {
+          text-decoration: underline; }
+      .single-post-navigation ul li.next {
+        float: left; }
+        .single-post-navigation ul li.next strong {
+          display: block; }
+          .single-post-navigation ul li.next strong:before {
+            content: '❮ '; }
+        .single-post-navigation ul li.next a {
+          margin-left: 17px; }
+      .single-post-navigation ul li.previous {
+        float: right;
+        text-align: right; }
+        .single-post-navigation ul li.previous strong {
+          display: block; }
+          .single-post-navigation ul li.previous strong::after {
+            content: ' ❯'; }
+        .single-post-navigation ul li.previous a {
+          margin-right: 18px; }
+
+/* Comment Navigation ----------------------------------------------------- */
+.comment-navigation {
+  zoom: 1;
+  margin: 30px 0 0;
+  clear: both; }
+  .comment-navigation:before, .comment-navigation:after {
+    content: '';
+    display: table; }
+  .comment-navigation:after {
+    clear: both; }
+  .comment-navigation ul {
+    margin: 0;
+    list-style: none; }
+    .comment-navigation ul li {
+      margin: 0;
+      font-family: HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.5em;
+      line-height: 1;
+      width: 285px; }
+      .comment-navigation ul li a {
+        color: #000;
+        text-decoration: none; }
+        .comment-navigation ul li a:hover, .comment-navigation ul li a:focus {
+          color: #00c4ee; }
+      .comment-navigation ul li.next {
+        float: left; }
+        .comment-navigation ul li.next a {
+          display: block; }
+          .comment-navigation ul li.next a:before {
+            content: '❮ '; }
+      .comment-navigation ul li.previous {
+        float: right;
+        text-align: right; }
+        .comment-navigation ul li.previous a {
+          display: block; }
+          .comment-navigation ul li.previous a::after {
+            content: ' ❯'; }
+
+/* Comments --------------------------------------------------------------- */
+#comments {
+  zoom: 1;
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */
+  padding: 50px;
+  margin: 50px 0; }
+  #comments:before, #comments:after {
+    content: '';
+    display: table; }
+  #comments:after {
+    clear: both; }
+  #comments a {
+    font-weight: bold;
+    text-decoration: none; }
+    #comments a:hover, #comments a:focus {
+      text-decoration: underline; }
+  #comments ol {
+    list-style: none; }
+    #comments ol li {
+      margin: 0; }
+      #comments ol li article {
+        margin: 20px 0;
+        position: relative;
+        min-height: 64px;
+        padding-left: 75px; }
+        #comments ol li article .avatar {
+          position: absolute;
+          top: 0;
+          left: 0; }
+        #comments ol li article h3 {
+          font-size: 1.125em; }
+          #comments ol li article h3 a {
+            color: #000;
+            text-decoration: none; }
+            #comments ol li article h3 a:hover, #comments ol li article h3 a:focus {
+              color: #09c;
+              text-decoration: underline; }
+        #comments ol li article p {
+          margin: .5em 0; }
+        #comments ol li article footer {
+          font-size: .75em;
+          color: #666; }
+          #comments ol li article footer time {
+            display: inline; }
+      #comments ol li li {
+        margin-left: 50px; }
+        #comments ol li li article {
+          min-height: 48px;
+          padding-left: 60px; }
+
+/* Comment Form ----------------------------------------------------------- */
+#respond {
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */
+  padding: 50px;
+  margin: 50px 0;
+  position: relative; }
+  #respond .comment-notes,
+  #respond .form-allowed-tags {
+    color: #666;
+    margin: .5em 0 0; }
+
+/* 404 Page --------------------------------------------------------------- */
+#page-404 {
+  zoom: 1; }
+  #page-404:before, #page-404:after {
+    content: '';
+    display: table; }
+  #page-404:after {
+    clear: both; }
+  #page-404 #widgets section {
+    background: #fff;
+    /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+    position: relative;
+    z-index: 1;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+    /*
+    	&:before,
+    	&:after {
+    		content:"";
+    		position:absolute; 
+    		z-index:-2;
+    		bottom:15px;
+    		left:10px;
+    		width:50%;
+    		height:20%;
+    		max-width:300px;
+    		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+    		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+    		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+    		-webkit-transform:rotate(-3deg);    
+    		-moz-transform:rotate(-3deg);   
+    		-ms-transform:rotate(-3deg);   
+    		-o-transform:rotate(-3deg);
+    		transform:rotate(-3deg);
+    	}
+    	&:after {
+    		right:10px; 
+    		left:auto;
+    		-webkit-transform:rotate(3deg);   
+    		-moz-transform:rotate(3deg);  
+    		-ms-transform:rotate(3deg);  
+    		-o-transform:rotate(3deg);
+    		transform:rotate(3deg);
+    	}
+    */
+    padding: 15px;
+    margin: 0 15px 15px 0;
+    float: left;
+    width: 280px; }
+    #page-404 #widgets section:nth-child(odd) {
+      clear: left; }
+
+/* Archives Page ---------------------------------------------------------- */
+#page-archives .post-content section {
+  background: #fff;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */
+  padding: 15px;
+  margin: 0 15px 15px 0;
+  float: left;
+  width: 280px; }
+  #page-archives .post-content section:nth-child(odd) {
+    clear: left; }
+
+/* Sidebar ---------------------------------------------------------------- */
+#sidebar {
+  background: #f9f9f9;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */
+  padding: 50px;
+  margin: 50px 0;
+  zoom: 1; }
+  #sidebar:before, #sidebar:after {
+    content: '';
+    display: table; }
+  #sidebar:after {
+    clear: both; }
+  #sidebar .widget {
+    float: left;
+    width: 300px;
+    margin-left: 50px; }
+    #sidebar .widget:first-child {
+      margin-left: 0; }
+    #sidebar .widget h3 {
+      font-family: "TradeGothicCn", Arial, sans-serif;
+      font-weight: bold;
+      color: #000;
+      font-size: 21px;
+      text-transform: uppercase;
+      line-height: 1.25;
+      margin: 0; }
+    #sidebar .widget ul, #sidebar .widget p, #sidebar .widget form {
+      margin: .5em 0 0; }
+    #sidebar .widget a {
+      color: #000;
+      text-decoration: none; }
+      #sidebar .widget a:hover, #sidebar .widget a:focus {
+        color: #069;
+        text-decoration: underline; }
+    #sidebar .widget .more {
+      margin: 0; }
+      #sidebar .widget .more a {
+        display: block;
+        padding-top: .5em;
+        border-top: 1px solid #ddd;
+        text-align: right;
+        font-weight: bold;
+        color: #00c1f1; }
+        #sidebar .widget .more a:hover, #sidebar .widget .more a:focus {
+          cursor: pointer; }
+  #sidebar .widget_text {
+    background: #ffc;
+    /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+    position: relative;
+    z-index: 1;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+    /*
+    	&:before,
+    	&:after {
+    		content:"";
+    		position:absolute; 
+    		z-index:-2;
+    		bottom:15px;
+    		left:10px;
+    		width:50%;
+    		height:20%;
+    		max-width:300px;
+    		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+    		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+    		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+    		-webkit-transform:rotate(-3deg);    
+    		-moz-transform:rotate(-3deg);   
+    		-ms-transform:rotate(-3deg);   
+    		-o-transform:rotate(-3deg);
+    		transform:rotate(-3deg);
+    	}
+    	&:after {
+    		right:10px; 
+    		left:auto;
+    		-webkit-transform:rotate(3deg);   
+    		-moz-transform:rotate(3deg);  
+    		-ms-transform:rotate(3deg);  
+    		-o-transform:rotate(3deg);
+    		transform:rotate(3deg);
+    	}
+    */
+    padding: 30px;
+    width: 240px;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg); }
+
+.mac #sidebar #widget-search #searchsubmit {
+  padding: 7px 0 0 0; }
+
+/* Footer ----------------------------------------------------------------- */
+#site-footer {
+  position: relative;
+  padding: 20px 50px;
+  background: #f9f9f9;
+  margin: 0;
+  /* @see http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 64, 0, 0.1) inset;
+  /*
+  	&:before,
+  	&:after {
+  		content:"";
+  		position:absolute; 
+  		z-index:-2;
+  		bottom:15px;
+  		left:10px;
+  		width:50%;
+  		height:20%;
+  		max-width:300px;
+  		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);   
+  		-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		box-shadow:0 15px 10px rgba(0, 0, 0, 0.1);
+  		-webkit-transform:rotate(-3deg);    
+  		-moz-transform:rotate(-3deg);   
+  		-ms-transform:rotate(-3deg);   
+  		-o-transform:rotate(-3deg);
+  		transform:rotate(-3deg);
+  	}
+  	&:after {
+  		right:10px; 
+  		left:auto;
+  		-webkit-transform:rotate(3deg);   
+  		-moz-transform:rotate(3deg);  
+  		-ms-transform:rotate(3deg);  
+  		-o-transform:rotate(3deg);
+  		transform:rotate(3deg);
+  	}
+  */ }
+  #site-footer .copyright {
+    color: #666;
+    font-size: .875em; }
