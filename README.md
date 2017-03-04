@@ -1,4 +1,4 @@
-:warning: **Attention:** This theme for WordPress 3.0 is very old and no longer supported. Use at your own risk!
+:warning: **Attention:** This theme for WordPress 3 is very old and no longer supported. Use at your own risk!
 
 # CSS Curmudgeon WordPress Theme
 
@@ -8,7 +8,7 @@ CSS Curmudgeon is a custom WordPress child theme for [csscurmudgeon.com/](http:/
 
 ## Requirements:
 
-Requires at least WordPress 3.0
+Requires at least WordPress 3.1
 
 ## Child Theme Tips:
 
